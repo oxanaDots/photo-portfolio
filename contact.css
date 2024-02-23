@@ -1,0 +1,146 @@
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+  
+}
+
+   
+    label{
+        
+        display: block;
+        margin-bottom: 1em;
+       
+    }
+    
+   
+    
+
+   
+    .wrapper-form {
+            
+       display: flex;
+       justify-content: space-between;
+       
+    }
+        
+    
+    
+    
+  
+    .formheader{
+        color: rgba(255, 255, 255, 0.521);
+        font-family: 'Public Sans', sans-serif;
+        text-align: center;
+        font-size: 1.3em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        display: flex;
+        justify-content: center;
+        
+    }
+    fieldset {
+        
+        border: none;
+        
+    }
+   
+    textarea {
+        
+        margin-top: 1em;
+        background-color: transparent;
+        border-width: .1em;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color:  rgb(255, 255, 255);
+        
+        font-family: Arial, Helvetica, sans-serif;
+        width: 45em;
+        resize: none;
+    }
+
+
+    .message-textarea{
+      padding-bottom: 4rem;
+      color: rgba(255, 255, 255, 0.753);
+
+    }
+
+    textarea::placeholder{
+        font-size: 1.2em;
+        color: rgba(255, 255, 255, 0.753);
+    }
+   
+    input{
+        
+        padding: .4em;
+        background-color: transparent;
+        border-width: .1em;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 19em;
+        border-color:  rgb(255, 255, 255);
+        
+    }
+    input::placeholder{
+        font-size: 1.2em;
+        font-weight: 100;
+        color: rgba(255, 255, 255, 0.753);
+    }
+    
+    textarea:focus, input:focus{
+        outline: none;
+    }
+
+     :hover::input-placeholder{
+
+        color: #fefefe;
+     }
+
+    :focus::-webkit-input-placeholder{
+        color: rgba(255, 255, 255, 0.3)
+     }
+
+   button {
+        
+    
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: .7rem;
+        padding-bottom: .7rem;
+        margin-top: 2em;
+        margin-bottom: 4rem;
+        background: linear-gradient(160deg, #00000057, #ffffff00);
+        border: none;
+        
+        font-size: .6em;
+        color: rgb(255, 255, 255);
+        
+    }
+
+    button:hover{
+        /* box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3); */
+        background: linear-gradient(160deg, #00000086, #ffffff00);
+    }
+
+    .error-message{
+        color: rgb(194, 45, 45);
+        font-size: small;
+        display: block;
+        margin-top: 0.6rem;
+    }
+    
+
+    footer{
+   
+        position: relative !important;
+       
+       
+    }
+
+
+
+    

@@ -1,0 +1,218 @@
+html {  box-sizing: border-box; 
+    scroll-behavior: smooth; } 
+    *, *::before, *::after {  box-sizing: inherit;  } 
+    
+    
+    body {
+        font-size:30px;
+    }
+       
+            body{
+                /* background-color:rgb(88, 82, 82); */
+                background-image: url(photos/DSCF7391.png);
+                background-size: cover ;
+                padding: 0;
+                margin: 0;
+               
+                background-attachment: fixed ;
+            }
+      
+    
+    .logo {
+        
+        height: 2em;
+        width: auto;
+        margin-top: 1.5rem;
+        margin-left: 4rem;
+        z-index: 10;
+        position: relative;
+        opacity: 0.7;
+    }
+    
+
+    .mobile-nav li {
+        display: none;
+        }
+
+
+
+    
+    nav ul {
+    
+        z-index: 2;
+        position: absolute;
+        top: 0em;
+        right: 4rem;
+        
+        
+    }
+    nav li {
+    display: inline-block;
+    
+    
+    }
+    nav a {
+        color: #ffffff;
+        opacity: 0.3;
+        padding: 1em;
+        font-size: 0.9rem;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline;
+    }
+    
+    a {
+    text-decoration: none; }
+    nav a:hover {   color: #ffffff; opacity: 0.7;}
+    nav a:active { color: rgb(255, 255, 255);}
+   
+
+  
+    footer{
+        display: flex;
+        color: #ffffff;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: .4em;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+       opacity: 0.6;
+        bottom: 0;
+        text-align: center;
+        width: 100vw;
+       
+    }
+  
+    
+    img.icon{
+            height: 2.2em;
+            width: auto;
+        }
+    .icon{
+    
+        color: #ffffff;
+    }
+    a.icon{
+    display: block;
+    padding: 1em;
+    }
+    
+
+    @media (max-width: 800px){
+    
+
+        .nav {
+            display: none;
+        }
+    
+       
+        .menu-toggle{
+            position: absolute;
+            right: 1rem;
+            top: 2rem;
+           margin: auto;
+         z-index: 1000 !important;
+          }
+    
+           .bar{
+              
+    
+               height: .5vw;
+               width: 5vw;
+                background-color: #ffffff87;
+                display: flex;
+                
+                cursor: pointer;
+                z-index: 1000;
+                margin: 1vw auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+              }
+              
+              
+              .menu-toggle:hover{
+                cursor: pointer;
+              }
+              
+              #mobile-menu.is-active .bar:nth-child(2){
+                opacity: 0;
+              }
+              
+              #mobile-menu.is-active .bar:nth-child(1){
+                -webkit-transform: translateY(1vw) rotate(45deg);
+                -ms-transform: translateY(1vw) rotate(45deg);
+                -o-transform: translateY(1vw) rotate(45deg);
+                transform: translateY(1vw) rotate(45deg);
+              }
+              
+              #mobile-menu.is-active .bar:nth-child(3){
+                -webkit-transform: translateY(-2vw) rotate(-45deg);
+                -ms-transform: translateY(-2vw) rotate(-45deg);
+                -o-transform: translateY(-2vw) rotate(-45deg);
+                transform: translateY(-2vw) rotate(-45deg);
+              }
+          
+         
+              .mobile-nav ul {
+               position: absolute;
+                z-index: 2000;
+               display: flex;
+               flex-direction: column;
+                top: 60vw;
+                right: 50%;
+                transform: translate(50%, -100%);
+              display: flex;
+              justify-content: center;
+              padding: 0;
+             
+                
+            }
+    
+            .mobile-nav li {
+            display: block !important;
+            font-size: 6vw;
+            padding: 2vw;
+            }
+    
+    
+            .mobile-nav a {
+                color: #ffffff7e;
+          
+                padding: 2rem;
+            
+                font-family: Arial, Helvetica, sans-serif;
+                display: inline;
+            }
+            
+            a {
+         
+            text-decoration: none; }
+            nav a:hover {   color: #ffffff; opacity: 0.7;}
+            nav a:active { color: aliceblue;}
+           
+         
+            .mobile-nav{
+               position: fixed;
+                opacity: 0.5;
+                transform: translateX(100%); 
+                transition: all 0.5s ease-in-out;
+                width: 100%;
+                height: 100%;
+                background-image: url(photos/Stormzy.jpg);
+                background-size: cover;
+                z-index: 100;
+                background-size: 160vw;
+                background-position: top right;
+             
+            }
+    
+        
+       
+    
+          .show{
+               
+                transform: translateX(0);
+                 opacity: 1;
+                transition: all 0.5s ease-in-out;
+            }
+        }

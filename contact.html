@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="author" content="Oxana Dotsenko">
+    <meta name="description" content="This is an official page for my photography services">
+<title></title>
+
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans&family=Rethink+Sans&display=swap" rel="stylesheet">
+
+<link rel="icon" href="" type="image/x-icon">
+<link rel="stylesheet" href="header-footer.css">
+<link rel="stylesheet" href="contact.css">
+</head>
+
+<body> 
+    <div class="mobile-nav">
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="contact.html">CONTACT</a>
+            </li>
+         
+        </ul>
+    </div>
+<header>
+    <div>
+        <a href="index.html">
+        <img class="logo" src="/photos/logo2.png" alt="">
+    </a>
+    </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                
+                <li>
+                    <a href="portfolio.html">PORTFOLIO</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+    </header>
+
+    
+   
+           
+       
+
+        <form id = "myForm" novalidate  action="form.php" method="post">
+        <fieldset>
+            <div><legend class="formheader">GET IN TOUCH</legend>
+            </div>
+            <div class="wrapper-form">
+            <div class="label1">
+                <label  for="name"></label>
+                <input type="text" name="name" id="name" placeholder="your name">
+                <span id="nameError" class="error-message"></span>
+            </div>
+            <div class="label1">
+                <label  for="email"></label>
+                <input type="email" name="email" id="email" placeholder="email address">
+                <span id="emailError" class="error-message"></span>
+            </div>
+        </div>
+        
+            <div>
+                <label for="subject"></label>
+                <textarea name="subject" placeholder="subject of message" id="subject" cols="40" rows="0"></textarea>
+                <span id="subjectError" class="error-message"></span>
+            </div>
+            <div>
+                <label for="message"></label>
+                <textarea class="message-textarea" name="message"  placeholder="your message" id="message" cols="50" rows="2"></textarea>
+                <span id="messageError" class="error-message"></span>
+            </div>
+            <div class="button">
+                <button type="submit" name="btnSubmit" >Submit Form</button>
+            </div>
+        </div>
+        </fieldset>
+    </form>
+</div>
+<script src="scripts.js"></script>
+<script src="app.js"></script>
+    </body>
+
+    
+    <footer class="main-footer">
+        <div id="footer">
+           <p>Copyright &copy;Oxana Dotsenko 2023</p>
+       </div>
+       <div class="footer">
+           <img class="icon" src="/photos/logos-01.png" alt="">
+       </div>
+       
+          <div class="footer">
+            <a class="icon" href="#">back to top</a>
+          </div>
+   
+       </footer>
+    </html>
