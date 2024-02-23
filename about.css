@@ -54,10 +54,9 @@ html {  box-sizing: border-box;
     transition: transform 0.8s ease-in-out;
     box-shadow: 6px 6px 20px rgb(0, 0, 0, .5);
 }
-
 footer{
    
-    /* position: relative !important; */
+    position: relative !important;
    
    
 }
@@ -138,6 +137,7 @@ body{
         height: 114vw;
         border-radius: .8rem;
      
+        
        
     }
 
@@ -151,12 +151,7 @@ body{
 
     
 
-   .logo{
-   width: 16vw !important;
-   height: auto !important;
-    margin-top: 1rem !important;
-    margin-left: 2rem !important;
-   }
+
 
      img{
       

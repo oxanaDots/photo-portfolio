@@ -22,7 +22,7 @@ html {  box-sizing: border-box;
         
         height: 2em;
         width: auto;
-        margin-top: 1.5rem;
+        margin-top: 0;
         margin-left: 4rem;
         z-index: 10;
         position: relative;
@@ -110,9 +110,17 @@ html {  box-sizing: border-box;
             right: 1rem;
             top: 2rem;
            margin: auto;
-         z-index: 1000 !important;
+         z-index: 5000 !important;
           }
     
+
+          .logo{
+            width: 16vw !important;
+            height: auto !important;
+             margin-top: 1rem !important;
+             margin-left: 2rem !important;
+            }
+
            .bar{
               
     
