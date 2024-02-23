@@ -138,10 +138,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const container = document.querySelector('.main-title');
     const arrowUp = document.querySelector('.up');
     const arrowDown = document.querySelector('.down');
-
+    const about = document.querySelector('.about');
     function handleScroll (){
         const isAtBottom = container.scrollTop + container.offsetHeight >= container.scrollHeight;
         const isAtTop = container.scrollTop === 0;
+        const quaterwayPoint = container.scrollTop + container.offsetHeight / 3;
+        const isAtquaterScreen = quaterwayPoint >= container.scrollHeight / 3;
+   
 
         if (isAtBottom){
 
@@ -150,13 +153,17 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('bottom')
             arrowUp.style.opacity = '1';
             arrowDown.style.opacity = '0';
-        
+           
             
         } else if (isAtTop){
-           
+           about.style.opacity = '0';
             arrowUp.style.opacity = '0';
             arrowDown.style.opacity = '1';
+
+        } else if(isAtquaterScreen){
+            about.style.opacity = '1';
         }
+
         
        }
 
