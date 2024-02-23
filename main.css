@@ -66,6 +66,8 @@ border: #ffffff4f 0.1px solid;
   background: linear-gradient(rgba(0, 0, 0, 0.347), rgba(117, 117, 117, 0.445));
   /* background-color: #ffffff0c; */
   backdrop-filter: blur(6px); /* Adjust the blur radius as needed */
+  -webkit-backdrop-filter: blur(6px); /* Safari prefix */
+
 
 }
 
