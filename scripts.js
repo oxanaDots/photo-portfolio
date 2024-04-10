@@ -1,71 +1,5 @@
 
 
-function play(){
-  const sliders = document.querySelectorAll('.slider-container');
-
-  sliders.forEach(function(slider){
-    const playBtn = slider.querySelector('.play-button');
-    const pauseBtn = slider.querySelector('.pause-button');
-
-    slider.addEventListener('mouseenter', function(){
-  playBtn.style.opacity = '0.5'
-  pauseBtn.style.opacity = '0' 
-  })
-  
-  slider.addEventListener('mouseleave', function() {
-    playBtn.style.opacity = '0';
-    pauseBtn.style.opacity = '0' 
-  });
-  
-  })
-};
-
-
-
-function noBtn (){
-  const sliders = document.querySelectorAll('.slider-container');
-
-  sliders.forEach(function(slider){
-    const playBtn = slider.querySelector('.play-button');
-    const pauseBtn = slider.querySelector('.pause-button');
-
-    slider.addEventListener('mouseenter', function(){
-  playBtn.style.opacity = '0'
-  pauseBtn.style.opacity = '0' 
-  })
-  
-  slider.addEventListener('mouseleave', function() {
-    playBtn.style.opacity = '0';
-    pauseBtn.style.opacity = '0' 
-  });
-  
-  })
-};
-
-
-
-
-
-function pause(){
-  const sliders = document.querySelectorAll('.slider-container');
-
-  sliders.forEach(function(slider){
-    const playBtn = slider.querySelector('.play-button');
-    const pauseBtn = slider.querySelector('.pause-button');
-
-    slider.addEventListener('mouseenter', function(){
-      playBtn.style.opacity = '0'
-      pauseBtn.style.opacity = '0.5' 
-      })
-  
-  slider.addEventListener('mouseleave', function() {
-    playBtn.style.opacity = '0';
-    pauseBtn.style.opacity = '0' 
-  });
-  
-  })
-};
-
 
 
 function createSlider(sliderId) {
@@ -225,14 +159,49 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-document.querySelector('.right').addEventListener('click', nextSlide);
-document.querySelector('.left').addEventListener('click', prevSlide);
+// document.querySelector('.right').addEventListener('click', nextSlide);
+// document.querySelector('.left').addEventListener('click', prevSlide);
 
 // Show the first slide initially
 showSlide(currentSlide);
 
 
 
+      
+function is800pxMax() {
+  // Check if the viewport matches the media query for 800px maximum width
+  return window.matchMedia('(max-width: 800px)').matches;
+}
+
+// Example usage:
+if (is800pxMax()) {
+  // Execute code if viewport width is 800px or less
+
+document.querySelector('#slider--1').insertAdjacentHTML('afterend', html) 
+
+// Add event listener to the parent element using event delegation
+
+
+}
+
+
+
+
+
+const container = document.querySelector('.html');
+
+container.addEventListener('click', function(event) {
+const target = event.target;
+
+// Check if the clicked element has the class 'left' or 'right'
+if (target.classList.contains('left')) {
+
+  console.log(target)
+  prevSlide(currentSlide)
+} else if (target.classList.contains('right')) {
+ nextSlide(currentSlide)
+}
+});
 
 
 
@@ -245,14 +214,3 @@ showSlide(currentSlide);
   
  
 
-
-function toggleMenu() {
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileNav = document.querySelector('.mobile-nav');
-  // Toggle the 'is-active' class
-  mobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('is-active');
-   mobileNav.classList.toggle('show');
-  })
-}
-toggleMenu();

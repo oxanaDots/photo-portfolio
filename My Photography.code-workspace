@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5503,
+		"workbench.colorTheme": "Default Dark Modern",
+		"liveServer.settings.multiRootWorkspaceName": "My Photography"
+	}
+}

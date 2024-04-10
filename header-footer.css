@@ -1,6 +1,6 @@
-html {  box-sizing: border-box; 
+/* html {  box-sizing: border-box; 
     scroll-behavior: smooth; } 
-    *, *::before, *::after {  box-sizing: inherit;  } 
+    *, *::before, *::after {  box-sizing: inherit;  }  */
     
     
     body {
@@ -13,7 +13,7 @@ html {  box-sizing: border-box;
                 background-size: cover ;
                 padding: 0;
                 margin: 0;
-               
+              background-position-x: center;
                 background-attachment: fixed ;
             }
       
@@ -72,16 +72,18 @@ html {  box-sizing: border-box;
         color: #ffffff;
         flex-direction: row;
         justify-content: space-evenly;
-        font-size: .4em;
+        font-size: clamp(0.6rem, 3vw - 0.8rem, 0.8rem);
+
         font-family: Arial, Helvetica, sans-serif;
-        position: absolute;
+        position: fixed;
        opacity: 0.6;
         bottom: 0;
         text-align: center;
-        width: 100vw;
+        width: 100%;
        
     }
   
+   
     
     img.icon{
             height: 2.2em;
@@ -100,8 +102,8 @@ html {  box-sizing: border-box;
     @media (max-width: 800px){
     
 
-        .nav {
-            display: none;
+        .nav ul {
+            display: none !important;
         }
     
        
@@ -110,7 +112,7 @@ html {  box-sizing: border-box;
             right: 1rem;
             top: 2rem;
            margin: auto;
-         z-index: 5000 !important;
+           z-index: 5000 !important;
           }
     
 

@@ -8,29 +8,28 @@
     <meta name="author" content="Oxana Dotsenko">
     <meta name="description" content="This is an official page for my photography services">
 <title></title>
-
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans&family=Rethink+Sans&display=swap" rel="stylesheet">
-
-<link rel="icon" href="" type="image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script async src="header-footer.js"></script>
 <link rel="stylesheet" href="about.css">
 <link rel="stylesheet" href="header-footer.css">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans&family=Rethink+Sans&display=swap" rel="stylesheet">
+
+
 </head>
 
-<body> 
+<header>
     <div class="mobile-nav">
         <ul>
             <li>
-                <a href="index.html">HOME</a>
+                <a href="contact.html">CONTACT</a>
             </li>
             <li>
-                <a href="contact.html">CONTACT</a>
+                <a href="portfolio.html">PORTFOLIO</a>
             </li>
          
         </ul>
     </div>
-    <header>
-    
+
+
         <div>
             <a href="index.html">
             <img class="logo" src="/photos/logo2.png" alt="">
@@ -39,9 +38,7 @@
         <nav  class="nav">
        
             <ul>
-                <li>
-                    <a href="index.html">HOME</a>
-                </li>
+            
                 <li>
                     <a href="contact.html">CONTACT</a>
                 </li>
@@ -51,11 +48,15 @@
             </ul>     
           
         </nav>
-
-
-    
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
+    <body>
  
+    <div class="container">
     <div class="top">
 
         <div class="menu-toggle" id="mobile-menu">
@@ -66,13 +67,14 @@
 
 
 
-        <div class="left"></div> 
-        <div class="right"></div>
+   
      <div id="main-container--one" >
        
-        <div class="slider-container hover" id="slider--1" >
+        <div class="slider-container" id="slider--1" >
            
         <div class="slider" >
+            <!-- <div class="left"></div> 
+            <div class="right"></div> -->
             
            <div class="slide"><img src="photos/Stormzy_02.jpg" alt="Stormzy at All Points East Festival" title="Stromzy: This Is What I Mean Day at Victoria Park"></div>
            <div class="slide"><img src="photos/Stormzy_01.jpg" alt="Stormzy headlining All Points East Festival in 2023" title="Stormzy live at Victoria Park, 2023 "></div>
@@ -96,7 +98,7 @@
     </div>
     
     
-        <div class="slider-container hover" id="slider--2" >
+        <div class="slider-container" id="slider--2" >
             
             <div class="slider" >
                 <div class="slide"><img src="photos/Young_the_Giant_01.jpg" alt="Young the Giant at Electric Brixton" title="Young the Giant: the Front Man"></div>
@@ -119,7 +121,7 @@
                       </svg>
                     </div>
             </div>
-            <div class="slider-container hover" id="slider--3" class="hover">
+            <div class="slider-container" id="slider--3" class="hover">
                 <div class="slider" >
                     <div class="slide"><img src="photos/Monster_Florence_01.jpg" alt="Monster Florence at Hootananny Brixton" title="Music photography: Monster Florence"></div>
                     <div class="slide"><img src="photos/Monster_Florence_02.jpg" alt="Monster Florence at Hootananny Brixton" title="Music photography: Monster Florence at Hootananny Brixton" ></div>
@@ -143,18 +145,10 @@
                         </div>
                 </div>
                 
-              </div>
+             
           
            
           
-      
-   
-          
-           
-
-              <div class="top-two">
-            
-              <div id="main-container--two" >
                 
                 <div class="slider-container hover" id="slider--4">
                 <div class="slider">
@@ -232,12 +226,13 @@
                         </div>
                      
                       </div>
-                    </div>
-               
-               
-                 
-                     
-    <script src="scripts.js"></script>
+            
+  
+        
+   <script src="header-footer.js"></script>
+    <script src="file.js"></script>
+  
+   
     </body>
 
     <footer class="footer">

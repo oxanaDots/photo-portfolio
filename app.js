@@ -1,8 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('myForm');
-
-    console.log("Form element:", form); // Debugging log
-
+   
+   document.addEventListener('DOMContentLoaded', function() {
+   const form = document.getElementById('myForm');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         resetErrors();
@@ -36,14 +34,40 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        if (!hasErrors) {
+       
             //  Check if form is a valid HTMLFormElement
-            if (form instanceof HTMLFormElement) {
-                form.submit();
-            } else {
-                console.error("form is not a valid form element.");
+            if (!hasErrors) {
+                // Send form data via AJAX
+                const formData = new FormData(form);
+            
+                fetch('contact.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(response => {
+                    console.log('Response:', response);
+                    if (response.trim() === 'success') {
+                        const messageDiv = document.getElementById('messageDiv');
+                        messageDiv.style.display = 'flex';
+                        // messageDiv.innerHTML = 'Thank you for contacting us. We will get back to you shortly';
+                        form.style.display = 'none'
+                    } else {
+                        console.error('Error:', response.status);
+                        alert('Something went wrong. Please try again.');
+                    } 
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Something went wrong. Please try again.');
+                });
             }
-        }
+            
     });
 
     function resetErrors() {

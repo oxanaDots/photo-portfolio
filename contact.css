@@ -2,7 +2,8 @@ form{
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-  
+   transition: opacity 0.5s ease-in-out;
+
 }
 
    
@@ -13,26 +14,27 @@ form{
        
     }
     
-   
-    
 
    
     .wrapper-form {
             
        display: flex;
+       
        justify-content: space-between;
        
     }
         
     
-    
+    .email{
+        justify-content: flex-end;
+    }
     
   
     .formheader{
         color: rgba(255, 255, 255, 0.521);
         font-family: 'Public Sans', sans-serif;
         text-align: center;
-        font-size: 1.3em;
+        font-size: clamp(1.6rem, 10vw - 1rem, 3rem);
         margin-top: 1em;
         margin-bottom: 1em;
         display: flex;
@@ -40,9 +42,10 @@ form{
         
     }
     fieldset {
-        
+     
+      
         border: none;
-        
+       padding-bottom: 3rem;
     }
    
     textarea {
@@ -54,26 +57,33 @@ form{
         border-left: none;
         border-right: none;
         border-color:  rgb(255, 255, 255);
-        
+       
         font-family: Arial, Helvetica, sans-serif;
-        width: 45em;
+        width: 45vw;
         resize: none;
     }
 
+    .message, .subject{
+        align-items: center;
+       
+      
+    }
 
     .message-textarea{
       padding-bottom: 4rem;
       color: rgba(255, 255, 255, 0.753);
-
+  align-items: center;
     }
 
     textarea::placeholder{
         font-size: 1.2em;
         color: rgba(255, 255, 255, 0.753);
+        font-size: clamp(0.8rem, 3vw - 1rem, 1rem);
+
     }
    
     input{
-        
+        align-items: center;
         padding: .4em;
         background-color: transparent;
         border-width: .1em;
@@ -81,12 +91,12 @@ form{
         border-left: none;
         border-right: none;
         font-family: Arial, Helvetica, sans-serif;
-        width: 19em;
+        width: 17vw;
         border-color:  rgb(255, 255, 255);
         
     }
     input::placeholder{
-        font-size: 1.2em;
+        font-size: clamp(0.8rem, 3vw - 1rem, 1rem);
         font-weight: 100;
         color: rgba(255, 255, 255, 0.753);
     }
@@ -115,7 +125,7 @@ form{
         margin-bottom: 4rem;
         background: linear-gradient(160deg, #00000057, #ffffff00);
         border: none;
-        
+        position: relative;
         font-size: .6em;
         color: rgb(255, 255, 255);
         
@@ -128,19 +138,84 @@ form{
 
     .error-message{
         color: rgb(194, 45, 45);
-        font-size: small;
+        font-size: clamp(0.6rem, 3vw - 1rem, 0.8rem);
         display: block;
         margin-top: 0.6rem;
     }
     
 
-    footer{
-   
-        position: relative !important;
+  
+
+    #messageDiv{
+        box-shadow: 6px 2px 20px rgb(0, 0, 0, .3);
+
+        border-radius: .8rem;
+        background-color:transparent;
+        font-size: clamp(0.8rem, 3vw - 0.8rem, 1.3rem);
+        
+  
+        padding-left: 6vw;
+        padding-right: 6vw;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 40vw;
+        text-align: center;
+        line-height: 2rem;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        right: 50%;
        
-       
-    }
+       transform: translate(50%, -50%);
+       font-family: 'Public Sans', sans-serif;
+       color: #00000071;
+        }
 
 
+        .strong{
+            font-size: clamp(0.8rem, 3vw - 0.8rem, 1.3rem);
 
+            font-weight: 700 ;
+        }
+        @media (max-width: 800px){
     
+ 
+            .wrapper-form {
+            
+            
+                flex-direction: column;
+               
+                
+             }
+
+             input{
+        
+                width: 45vw;
+                
+                
+            }
+
+
+            #messageDiv{
+                width: 60vw;
+                line-height: 1.5rem;
+               
+                }
+        
+            }    
+
+
+
+            @media (min-width: 800px) and (max-width: 1400px) {
+               
+
+                #messageDiv{
+                    width: 50vw;
+                   
+                }
+                    
+            }
+
