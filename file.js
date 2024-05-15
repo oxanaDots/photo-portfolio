@@ -1,4 +1,24 @@
 
+
+function toggleMenu() {
+  
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+    // Toggle the 'is-active' class
+    mobileMenu.addEventListener('click', () => {
+
+        console.log('event')
+
+      mobileMenu.classList.toggle('is-active');
+     mobileNav.classList.toggle('show');
+    })
+  }
+
+
+  toggleMenu();
+
+
 const mainContOne = document.querySelector('#main-container--one');
 const sliders = document.querySelectorAll('.slider-container');
 
@@ -32,7 +52,7 @@ mainContOne.addEventListener('click', function (e){
     const clicked = e.target.closest('.slider-container');
     const notClicked = Array.from(sliders).filter(s => s !== clicked);
     const isActive = clicked.classList.contains('slider-container-transformed');
-    if(!isActive || screenWidth <= 800 ){
+    if(!isActive || !isActive && screenWidth <= 800 ){
     createSlider(clicked, 3000);
    
    
@@ -40,10 +60,24 @@ mainContOne.addEventListener('click', function (e){
 
     notClicked.forEach(slider => {
         slider.style.filter = 'brightness(0.2)';
+        slider.classList.add("slider-container-darken");
+
         stopSlider(slider);   
     
     });
     document.querySelector('.html').style.opacity = '0'; // Remove the dynamically inserted HTML
+
+    }  else {
+  sliders.forEach(slider => {
+      slider.style.filter = 'brightness(1)';
+    stopSlider(slider)
+  }
+
+  
+)
+
+document.querySelector('.html').style.opacity = '1'; // Remove the dynamically inserted HTML
+
 
     }
 })
@@ -81,7 +115,7 @@ function stopSlider(slider) {
   clearInterval(intervalId);
   slider.dataset.intervalId = null;
   slider.classList.remove('slider-container-transformed');
-  slider.classList.add("slider-container-darken");
+  // slider.classList.remove("slider-container-darken");
   slider.classList.add("slider-smooth-transition");
 
 
@@ -121,7 +155,7 @@ function createSlider(slider, time) {
 
 
 
-
+// slider for the sliders for  screens not more than 800px
 
       let currentSlide = 0;
       const slides = document.querySelectorAll('.slider-container');

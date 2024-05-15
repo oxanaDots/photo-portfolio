@@ -158,5 +158,5 @@ document.addEventListener('DOMContentLoaded', function() {
        }
 
       
-        container.addEventListener('scroll', handleScroll);
+        // container.addEventListener('scroll', handleScroll);
    });

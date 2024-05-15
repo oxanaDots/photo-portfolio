@@ -1,9 +1,9 @@
 
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileNav = document.querySelector('.mobile-nav');
 
 function toggleMenu() {
-
+  
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileNav = document.querySelector('.mobile-nav');
 
     // Toggle the 'is-active' class
     mobileMenu.addEventListener('click', () => {

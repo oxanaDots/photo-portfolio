@@ -39,7 +39,7 @@
             if (!hasErrors) {
                 // Send form data via AJAX
                 const formData = new FormData(form);
-            
+            console.log(formData)
                 fetch('contact.php', {
                     method: 'POST',
                     body: formData
